@@ -9,7 +9,7 @@ import {
 	hasPreviewSecret,
 	isValidStoryblokPreview,
 } from '@/lib/storyblok-preview';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,13 +23,17 @@ export default async function PreviewPage({ params, searchParams }) {
 	const { slug } = await params;
 	const query = await searchParams;
 	const canPreview = isValidStoryblokPreview(query) || hasPreviewSecret(query);
+	const fullSlug = getStoryPathFromSlug(slug);
+	const publicPath = getRoutePathFromStorySlug(fullSlug);
 
 	if (!canPreview) {
+		if (!slug) {
+			redirect(publicPath);
+		}
+
 		notFound();
 	}
 
-	const fullSlug = getStoryPathFromSlug(slug);
-	const publicPath = getRoutePathFromStorySlug(fullSlug);
 	const story = await fetchStory(fullSlug, { preview: true });
 
 	if (!story) {
