@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata = {
 	title: 'Storyblok + Vercel Demo',
 	description:
-		'A Storyblok CMS demo rendered with Next.js and ready for Vercel previews.',
+		'Visual Storyblok authoring with a Next.js frontend delivered on Vercel.',
 };
 
 export default function RootLayout({ children }) {

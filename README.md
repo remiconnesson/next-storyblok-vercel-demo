@@ -1,13 +1,11 @@
 # Storyblok + Vercel Demo
 
-This demo renders a Storyblok space with a Next.js App Router frontend and is ready to deploy on Vercel.
-
-It intentionally uses Storyblok's native Visual Editor workflow. Vercel Content Link is not currently listed for Storyblok in Vercel's CMS integration docs, so the demo positions Storyblok visual editing plus Vercel preview deployments instead of field-level Content Link.
+This demo renders Storyblok-managed content with a Next.js App Router frontend deployed on Vercel. It uses Storyblok Visual Editor for authoring, protected draft previews for review, and Vercel ISR with webhook revalidation for published delivery.
 
 ## Local Setup
 
 ```sh
-npm install
+pnpm install
 ```
 
 Create `.env` from `.env.example`:
@@ -24,13 +22,13 @@ STORYBLOK_WEBHOOK_SECRET=<random_secret>
 Run locally:
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 For Storyblok Visual Editor local preview, Storyblok requires HTTPS:
 
 ```sh
-npx next dev --experimental-https
+pnpm exec next dev --experimental-https
 ```
 
 ## Seed Storyblok
@@ -40,7 +38,7 @@ The setup script creates or updates the demo components and stories. Do not comm
 ```sh
 STORYBLOK_SPACE_ID=<space_id> \
 STORYBLOK_MANAGEMENT_TOKEN=<personal_access_token> \
-npm run storyblok:setup
+pnpm storyblok:setup
 ```
 
 The script publishes:

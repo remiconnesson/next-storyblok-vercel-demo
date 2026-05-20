@@ -66,6 +66,10 @@ function createStoryblokUrl(path, params) {
 	return url;
 }
 
+function getCacheVersion(preview) {
+	return preview ? undefined : String(Date.now());
+}
+
 export function getStoryPathFromSlug(slug) {
 	const normalized = Array.isArray(slug) ? slug.join('/') : slug;
 	return normalized || 'home';
@@ -83,6 +87,7 @@ export async function fetchStory(fullSlug, { preview = false } = {}) {
 	const url = createStoryblokUrl(`cdn/stories/${fullSlug}`, {
 		token: getDeliveryToken(preview),
 		version: preview ? 'draft' : 'published',
+		cv: getCacheVersion(preview),
 	});
 
 	const response = await fetch(
@@ -114,6 +119,7 @@ export async function fetchStoryLinks({ preview = false } = {}) {
 		token: getDeliveryToken(preview),
 		version: preview ? 'draft' : 'published',
 		per_page: '100',
+		cv: getCacheVersion(preview),
 	});
 
 	const response = await fetch(

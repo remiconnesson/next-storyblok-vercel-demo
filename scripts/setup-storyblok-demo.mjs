@@ -316,177 +316,178 @@ const stories = [
 		slug: 'home',
 		content: pageContent([
 			blok('hero_section', {
-				eyebrow: 'Storyblok + Vercel',
-				headline: 'Visual editing for Vercel preview workflows',
+				eyebrow: 'Storyblok on Vercel',
+				headline: 'Launch Storyblok sites on Vercel',
 				summary:
-					'A component-driven Storyblok space feeding a Next.js App Router site. Editors work in Storyblok Visual Editor while Vercel provides preview, production, and the frontend delivery layer.',
-				primary_label: 'Explore visual editing',
+					'Give editors visual authoring in Storyblok while Vercel delivers the Next.js frontend with secure previews, caching, and revalidation.',
+				primary_label: 'Explore the editor',
 				primary_href: '/visual-editor',
-				secondary_label: 'See preview pipeline',
+				secondary_label: 'View architecture',
 				secondary_href: '/preview-pipeline',
 				visual_image_url: heroEditorImage,
 				visual_alt: 'Storyblok Visual Editor interface with AI tools and editable page preview',
-				panel_kicker: 'Demo status',
-				panel_title: 'CMS-authored blocks are live from Storyblok draft content.',
+				panel_kicker: 'Production pattern',
+				panel_title:
+					'Editors manage content in Storyblok. Developers ship the frontend on Vercel.',
 				panel_items: [
-					blok('hero_panel_item', { label: 'CMS region', value: 'EU space' }),
-					blok('hero_panel_item', { label: 'Renderer', value: 'Next.js RSC' }),
-					blok('hero_panel_item', { label: 'Deployment', value: 'Vercel-ready' }),
+					blok('hero_panel_item', { label: 'Authoring', value: 'Visual CMS' }),
+					blok('hero_panel_item', { label: 'Frontend', value: 'Next.js' }),
+					blok('hero_panel_item', { label: 'Delivery', value: 'Vercel' }),
 				],
 			}),
 			blok('integration_panel', {
 				eyebrow: 'Architecture',
-				heading: 'A clean path from content model to preview URL',
+				heading: 'From visual editing to global delivery',
 				description:
-					'The demo keeps the CMS boundary explicit: Storyblok owns components and stories, Next.js maps those blocks to React Server Components, and Vercel can host every branch as a reviewable preview.',
+					'Content teams compose pages in Storyblok while engineering keeps control of the React components, routing, caching, and deployment workflow.',
 				nodes: [
 					blok('integration_node', {
 						badge: '01',
-						title: 'Storyblok space',
+						title: 'Model content',
 						description:
-							'Reusable blocks, editable stories, and native visual preview context live in the CMS.',
+							'Reusable Storyblok blocks define the sections editors can safely compose.',
 					}),
 					blok('integration_node', {
 						badge: '02',
-						title: 'Next.js renderer',
+						title: 'Render with Next.js',
 						description:
-							'The app fetches draft or published content and renders Storyblok blocks through App Router server components.',
+							'The App Router maps each CMS block to a governed React Server Component.',
 					}),
 					blok('integration_node', {
 						badge: '03',
-						title: 'Vercel preview',
+						title: 'Preview securely',
 						description:
-							'Every branch can expose a shareable URL for editors, architects, and stakeholders to review.',
+							'Draft content loads only in authenticated preview contexts before it reaches production.',
 					}),
 					blok('integration_node', {
 						badge: '04',
-						title: 'Publish loop',
+						title: 'Deliver globally',
 						description:
-							'Storyblok publish events can trigger revalidation so the deployment updates without a full rebuild.',
+							'Published pages are cached on Vercel and refreshed through targeted revalidation.',
 					}),
 				],
 			}),
 			blok('metric_strip', {
-				eyebrow: 'What is seeded',
-				heading: 'A space that proves the end-to-end motion',
+				eyebrow: 'Outcome',
+				heading: 'A workflow built for content and engineering teams',
 				metrics: [
 					blok('metric', {
-						value: '13',
-						label: 'editable block types',
+						value: 'Visual',
+						label: 'authoring experience',
 						detail:
-							'Navigation, hero, metrics, feature cards, workflow steps, rich text, and CTAs.',
+							'Editors update structured page sections in Storyblok without changing application code.',
 					}),
 					blok('metric', {
-						value: '4',
-						label: 'published demo stories',
+						value: 'Governed',
+						label: 'component system',
 						detail:
-							'Home plus focused pages for editing, preview, and content-model discussions.',
+							'Developers control the React components, data fetching, and production behavior.',
 					}),
 					blok('metric', {
-						value: '0',
-						label: 'CMS proxy layers',
+						value: 'Fast',
+						label: 'published delivery',
 						detail:
-							'The frontend uses Storyblok delivery APIs directly through the official SDK.',
+							'Vercel serves published pages through static generation, caching, and revalidation.',
 					}),
 				],
 			}),
 			blok('feature_grid', {
-				eyebrow: 'Demo talking points',
-				heading: 'Position Storyblok where Content Link does not apply yet',
+				eyebrow: 'Capabilities',
+				heading: 'What this integration enables',
 				description:
-					'Vercel Content Link is not currently listed for Storyblok, so this demo shows the native Storyblok editing path and the Vercel preview story instead.',
+					'The same setup supports visual editing, controlled page composition, secure draft previews, and fast production delivery.',
 				features: [
 					blok('feature_card', {
-						tag: 'Editor UX',
-						title: 'Visual Editor-ready markup',
+						tag: 'Authoring',
+						title: 'Visual editing',
 						description:
-							'Every rendered block uses Storyblok editable attributes so CMS selection and page preview stay connected.',
+							'Editors select page sections, update fields, and preview changes in the Storyblok interface.',
 					}),
 					blok('feature_card', {
 						tag: 'Frontend',
-						title: 'Composable React mapping',
+						title: 'Component mapping',
 						description:
-							'Each Storyblok component maps to a React Server Component with predictable styling and responsive behavior.',
+							'Every Storyblok block maps to a deliberate React component in the Next.js application.',
 					}),
 					blok('feature_card', {
-						tag: 'Vercel',
-						title: 'Preview deployment fit',
+						tag: 'Preview',
+						title: 'Draft isolation',
 						description:
-							'The app is structured for Vercel previews, environment variables, and future webhook revalidation.',
+							'Draft content is available to editors without changing what production visitors see.',
 					}),
 					blok('feature_card', {
-						tag: 'Scale',
-						title: 'Schema-first demo content',
+						tag: 'Delivery',
+						title: 'Cached production pages',
 						description:
-							'The setup script can recreate the component library and demo stories in another Storyblok space.',
+							'Published pages are generated and cached by Vercel for fast global delivery.',
 					}),
 					blok('feature_card', {
 						tag: 'Security',
-						title: 'Token separation',
+						title: 'Separated access',
 						description:
-							'The delivery token powers the app; the Management API token is only needed during space setup.',
+							'Public delivery, draft preview, and management access use different tokens and environments.',
 					}),
 					blok('feature_card', {
-						tag: 'Roadmap',
-						title: 'Content Link caveat is explicit',
+						tag: 'Operations',
+						title: 'On-demand freshness',
 						description:
-							'The experience is honest about the current integration surface while still showing a strong CMS workflow.',
+							'Storyblok publish events can refresh affected Vercel routes without a full site rebuild.',
 					}),
 				],
 			}),
 			blok('workflow_section', {
 				eyebrow: 'Workflow',
-				heading: 'How the demo should be shown',
+				heading: 'A publishing flow teams can trust',
 				steps: [
 					blok('workflow_step', {
-						label: 'Step 1',
-						title: 'Edit blocks in Storyblok',
+						label: '01',
+						title: 'Compose content in Storyblok',
 						description:
-							'Open the Home story, select a block in the preview, and change copy or reorder sections.',
+							'Content teams build pages from approved sections and edit fields in a visual CMS.',
 					}),
 					blok('workflow_step', {
-						label: 'Step 2',
-						title: 'Review on the Next.js frontend',
+						label: '02',
+						title: 'Preview through the real frontend',
 						description:
-							'The app renders the same content model as production, so the preview reflects the real component system.',
+							'Draft previews render through the same Next.js components that power production.',
 					}),
 					blok('workflow_step', {
-						label: 'Step 3',
-						title: 'Deploy on Vercel',
+						label: '03',
+						title: 'Publish approved changes',
 						description:
-							'Link the project, add Storyblok env vars, and let Vercel host previews for every branch.',
+							'Storyblok publish events promote approved content from draft to published delivery.',
 					}),
 					blok('workflow_step', {
-						label: 'Step 4',
-						title: 'Add publish revalidation',
+						label: '04',
+						title: 'Refresh the Vercel cache',
 						description:
-							'Wire a Storyblok webhook to a Vercel route handler once the deployment URL and secret are final.',
+							'The frontend revalidates the relevant content so visitors see the latest published page.',
 					}),
 				],
 			}),
 			blok('rich_text_section', {
-				eyebrow: 'Content Link note',
-				heading: 'What to say in the demo',
+				eyebrow: 'Team model',
+				heading: 'Built for clear ownership',
 				body: richDoc([
 					paragraph(
-						'Current Vercel CMS integration docs do not list Storyblok as a Content Link provider. The right positioning is to show Storyblok native visual editing today, then explain how Vercel preview deployments, toolbar feedback, and webhook revalidation complete the operating model.',
+						'Storyblok owns the authoring experience and structured content model. Vercel owns the frontend runtime, deployment workflow, caching behavior, and production delivery.',
 					),
 					bullet(
-						'Use the Contentful demo as the comparison point for field-level Content Link.',
+						'Editors can move quickly without opening pull requests for routine page updates.',
 					),
 					bullet(
-						'Use this Storyblok demo to show component-based authoring, visual preview, and Vercel delivery.',
+						'Developers keep control of the UI contract, performance profile, and release process.',
 					),
 				]),
 			}),
 			blok('cta_section', {
-				eyebrow: 'Next step',
-				heading: 'Ready for Vercel once the local demo is approved',
+				eyebrow: 'Get started',
+				heading: 'Bring Storyblok content to Vercel',
 				description:
-					'The project can be linked to a Vercel project, assigned Storyblok delivery env vars, and extended with a Storyblok publish webhook.',
-				primary_label: 'Open preview page',
+					'Use Storyblok for visual authoring and Vercel for secure previews, fast published pages, and production-grade delivery.',
+				primary_label: 'View architecture',
 				primary_href: '/preview-pipeline',
-				secondary_label: 'Inspect content model',
+				secondary_label: 'See content model',
 				secondary_href: '/content-model',
 			}),
 		]),
@@ -496,27 +497,27 @@ const stories = [
 		slug: 'visual-editor',
 		content: pageContent([
 			blok('hero_section', {
-				eyebrow: 'Storyblok native editing',
-				headline: 'Click blocks, change content, preview the real site',
+				eyebrow: 'Visual authoring',
+				headline: 'Give editors a CMS they can work in directly',
 				summary:
-					'Storyblok Visual Editor gives editors a CMS-native preview surface. The frontend adds editable attributes on every block so the selected CMS block maps to the rendered page.',
+					'Storyblok Visual Editor lets content teams edit structured blocks while seeing the page they are changing. The Next.js frontend keeps the rendering system consistent across preview and production.',
 				primary_label: 'View content model',
 				primary_href: '/content-model',
 				secondary_label: 'Back home',
 				secondary_href: '/',
 				visual_image_url: marketerEditorImage,
 				visual_alt: 'Storyblok Visual Editor page preview with editable landing page content',
-				panel_kicker: 'Editor behavior',
+				panel_kicker: 'Editor experience',
 				panel_title:
-					'The demo is built around Storyblok editable blocks rather than Content Link.',
+					'Visual editing stays connected to the same components that ship to production.',
 				panel_items: [
 					blok('hero_panel_item', {
-						label: 'Preview type',
-						value: 'Native Storyblok',
+						label: 'Selection',
+						value: 'Block-level',
 					}),
 					blok('hero_panel_item', {
-						label: 'Markup',
-						value: 'storyblokEditable',
+						label: 'Content',
+						value: 'Structured fields',
 					}),
 					blok('hero_panel_item', {
 						label: 'Frontend',
@@ -525,24 +526,24 @@ const stories = [
 				],
 			}),
 			blok('rich_text_section', {
-				eyebrow: 'Editor script',
-				heading: 'What an editor can do',
+				eyebrow: 'Authoring',
+				heading: 'What editors can manage',
 				body: richDoc([
 					paragraph(
-						'An editor can open this story in Storyblok, change the hero headline, add a feature card, and preview the same React component system that will run on Vercel.',
+						'Editors can update hero copy, add feature cards, reorder sections, and publish approved changes without waiting for a frontend deploy.',
 					),
-					bullet('Select a section in the Visual Editor and jump to its fields.'),
+					bullet('Select a section in the Visual Editor and edit its fields.'),
 					bullet(
-						'Reorder blocks without asking engineering to change the page route.',
+						'Reorder page sections while staying inside the approved component model.',
 					),
 					bullet('Publish content independently from application deployment.'),
 				]),
 			}),
 			blok('cta_section', {
-				eyebrow: 'Demo route',
-				heading: 'The preview path is already dynamic',
+				eyebrow: 'Preview',
+				heading: 'Draft content stays separate from production',
 				description:
-					'This page is a Storyblok story at /visual-editor, rendered by the same catch-all Next.js route as the home page.',
+					'Editors can review unpublished changes in Storyblok while the public Vercel site continues serving the last published version.',
 				primary_label: 'Preview pipeline',
 				primary_href: '/preview-pipeline',
 				secondary_label: 'Home',
@@ -555,46 +556,46 @@ const stories = [
 		slug: 'preview-pipeline',
 		content: pageContent([
 			blok('hero_section', {
-				eyebrow: 'Vercel fit',
-				headline: 'Preview deployments make CMS review operational',
+				eyebrow: 'Frontend delivery',
+				headline: 'Use Vercel to preview, publish, and scale',
 				summary:
-					'Vercel gives every branch and environment a stable review URL. Storyblok can point its Visual Editor at those URLs once the project is linked and HTTPS preview targets are configured.',
+					'Vercel gives Storyblok-powered sites secure preview URLs, globally cached production pages, and a deployment workflow that fits modern frontend teams.',
 				primary_label: 'Inspect model',
 				primary_href: '/content-model',
 				secondary_label: 'Back home',
 				secondary_href: '/',
 				visual_image_url: developerCodeImage,
 				visual_alt: 'Storyblok developer code panel showing a Next.js example',
-				panel_kicker: 'Deployment layer',
+				panel_kicker: 'Delivery layer',
 				panel_title:
-					'The project is ready for env vars, previews, and webhook revalidation.',
+					'Storyblok content moves through the same Vercel delivery controls as the rest of the application.',
 				panel_items: [
 					blok('hero_panel_item', { label: 'Host', value: 'Vercel' }),
-					blok('hero_panel_item', { label: 'Mode', value: 'Preview first' }),
-					blok('hero_panel_item', { label: 'Cache', value: 'Webhook-ready' }),
+					blok('hero_panel_item', { label: 'Preview', value: 'Draft content' }),
+					blok('hero_panel_item', { label: 'Publish', value: 'Revalidated pages' }),
 				],
 			}),
 			blok('workflow_section', {
-				eyebrow: 'Deployment setup',
-				heading: 'The Vercel wiring to add next',
+				eyebrow: 'Delivery workflow',
+				heading: 'How content reaches production',
 				steps: [
 					blok('workflow_step', {
-						label: 'Env',
-						title: 'Add Storyblok delivery variables',
+						label: '01',
+						title: 'Fetch published content',
 						description:
-							'Set the delivery token, region, and optional Storyblok version for preview and production environments.',
+							'The public site requests the published Storyblok version and generates static pages on Vercel.',
 					}),
 					blok('workflow_step', {
-						label: 'URL',
-						title: 'Point Storyblok Visual Editor at Vercel',
+						label: '02',
+						title: 'Protect draft previews',
 						description:
-							'Use the preview or production URL as the visual editor location once the deployment exists.',
+							'The preview route validates Storyblok preview parameters before rendering draft content.',
 					}),
 					blok('workflow_step', {
-						label: 'Hook',
-						title: 'Add on-demand revalidation',
+						label: '03',
+						title: 'Revalidate on publish',
 						description:
-							'Create a route handler and a Storyblok webhook so published changes refresh the right cached routes.',
+							'A signed Storyblok webhook refreshes the relevant Vercel cache tags when content is published.',
 					}),
 				],
 			}),
@@ -603,22 +604,22 @@ const stories = [
 				heading: 'Where Vercel adds value',
 				metrics: [
 					blok('metric', {
-						value: 'HTTPS',
-						label: 'Visual Editor compatible',
+						value: 'Secure',
+						label: 'preview routes',
 						detail:
-							'Storyblok preview requires secure URLs; Vercel previews provide them by default.',
+							'Draft content is only available through protected preview paths.',
 					}),
 					blok('metric', {
-						value: 'Branch',
-						label: 'content review URLs',
+						value: 'Global',
+						label: 'edge delivery',
 						detail:
-							'Preview deployments create isolated environments for testing CMS changes with app changes.',
+							'Published pages are served through Vercel infrastructure close to visitors.',
 					}),
 					blok('metric', {
 						value: 'ISR',
 						label: 'publish revalidation',
 						detail:
-							'Storyblok publish webhooks can revalidate affected routes after deployment.',
+							'Updated content can refresh without rebuilding the entire application.',
 					}),
 				],
 			}),
@@ -630,83 +631,83 @@ const stories = [
 		content: pageContent([
 			blok('hero_section', {
 				eyebrow: 'Component model',
-				headline: 'Reusable sections seeded through the Management API',
+				headline: 'Govern page composition with reusable blocks',
 				summary:
-					'The demo space is not hand-built in the UI. A repeatable setup script creates or updates components and publishes stories, which makes the demo portable across Storyblok spaces.',
+					'The integration gives editors reusable Storyblok sections while developers keep the frontend component contract explicit and testable.',
 				primary_label: 'Visual editor page',
 				primary_href: '/visual-editor',
 				secondary_label: 'Home',
 				secondary_href: '/',
 				visual_image_url: developerCodeImage,
 				visual_alt: 'Code-oriented Storyblok developer panel for a Next.js setup',
-				panel_kicker: 'Model inventory',
+				panel_kicker: 'Content model',
 				panel_title:
-					'The page body accepts focused section blocks that map directly to React.',
+					'Structured Storyblok blocks map directly to the components rendered by Next.js.',
 				panel_items: [
 					blok('hero_panel_item', { label: 'Root type', value: 'page' }),
-					blok('hero_panel_item', { label: 'Sections', value: '7 types' }),
-					blok('hero_panel_item', { label: 'Nested blocks', value: '6 types' }),
+					blok('hero_panel_item', { label: 'Sections', value: 'Reusable' }),
+					blok('hero_panel_item', { label: 'Rendering', value: 'Component-driven' }),
 				],
 			}),
 			blok('feature_grid', {
-				eyebrow: 'Schema',
+				eyebrow: 'Content model',
 				heading: 'The pieces editors can compose',
 				description:
-					'Each block is intentionally small, repeatable, and easy to reason about in a customer-facing architecture demo.',
+					'Each block gives editors useful control while preserving the design system and frontend implementation.',
 				features: [
 					blok('feature_card', {
 						tag: 'Root',
 						title: 'Page',
 						description:
-							'Owns brand metadata, navigation items, and a restricted body of section components.',
+							'Defines navigation and a restricted body of approved section components.',
 					}),
 					blok('feature_card', {
 						tag: 'Section',
 						title: 'Hero section',
 						description:
-							'Combines key messaging, CTAs, a visual asset URL, and proof-point rows.',
+							'Combines primary messaging, calls to action, a visual asset, and proof points.',
 					}),
 					blok('feature_card', {
 						tag: 'Section',
 						title: 'Integration panel',
 						description:
-							'Shows the Storyblok to Next.js to Vercel flow as editable CMS content.',
+							'Explains architecture and process as editable content.',
 					}),
 					blok('feature_card', {
 						tag: 'Section',
 						title: 'Metric strip',
 						description:
-							'Highlights measurable proof points without hard-coding them in the frontend.',
+							'Highlights outcome statements without hard-coding copy in the frontend.',
 					}),
 					blok('feature_card', {
 						tag: 'Section',
 						title: 'Feature grid',
 						description:
-							'Lets editors add and reorder value propositions as nested feature cards.',
+							'Lets editors add and reorder value propositions as nested cards.',
 					}),
 					blok('feature_card', {
 						tag: 'Section',
 						title: 'Rich text and CTA',
 						description:
-							'Supports narrative explanation and conversion actions from CMS-managed content.',
+							'Supports explanatory content and next actions from Storyblok.',
 					}),
 				],
 			}),
 			blok('rich_text_section', {
-				eyebrow: 'Implementation note',
-				heading: 'Why this model is useful for a solution architect',
+				eyebrow: 'Governance',
+				heading: 'Why this model scales',
 				body: richDoc([
 					paragraph(
-						'The model keeps the demo close to real customer architecture: marketers control page composition, developers control the rendering contract, and Vercel owns delivery.',
+						'The model separates concerns cleanly: content teams control page composition, developers control the rendering contract, and Vercel provides the delivery layer.',
 					),
 					bullet(
-						'The schema uses component whitelists so editors compose valid pages.',
+						'Component whitelists keep editors inside approved page structures.',
 					),
 					bullet(
-						'The frontend is block-driven, so adding stories does not require new routes.',
+						'Block-driven rendering lets teams add stories without creating new application routes.',
 					),
 					bullet(
-						'The setup script makes the demo repeatable for workshops and customer calls.',
+						'The same content model can support landing pages, campaign pages, and product storytelling.',
 					),
 				]),
 			}),
