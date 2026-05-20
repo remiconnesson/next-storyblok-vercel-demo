@@ -1,5 +1,6 @@
 const globals = {
 	console: 'readonly',
+	Buffer: 'readonly',
 	fetch: 'readonly',
 	process: 'readonly',
 	Response: 'readonly',

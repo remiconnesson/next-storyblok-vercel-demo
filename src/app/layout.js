@@ -1,5 +1,4 @@
 import './globals.css';
-import StoryblokProvider from '@/components/StoryblokProvider';
 
 export const metadata = {
 	title: 'Storyblok + Vercel Demo',
@@ -11,9 +10,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<StoryblokProvider>
-					{children}
-				</StoryblokProvider>
+				{children}
 			</body>
 		</html>
 	);
