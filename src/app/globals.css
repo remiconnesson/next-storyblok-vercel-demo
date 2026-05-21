@@ -533,6 +533,160 @@ img {
 	max-width: 680px;
 }
 
+.developer-hero,
+.developer-checklist,
+.code-section {
+	margin: 0 auto;
+	max-width: 1120px;
+	padding-left: 24px;
+	padding-right: 24px;
+	width: 100%;
+}
+
+.developer-hero {
+	align-items: start;
+	display: grid;
+	gap: 44px;
+	grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.86fr);
+	padding-bottom: 56px;
+	padding-top: 72px;
+}
+
+.developer-hero-copy {
+	min-width: 0;
+}
+
+.developer-hero h1 {
+	font-size: clamp(40px, 5.4vw, 62px);
+	line-height: 1.02;
+	margin: 0;
+	max-width: 760px;
+	overflow-wrap: anywhere;
+}
+
+.developer-hero p:not(.eyebrow),
+.developer-flow-step p,
+.developer-checklist li {
+	color: var(--muted);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.developer-hero p:not(.eyebrow) {
+	margin: 22px 0 0;
+	max-width: 690px;
+}
+
+.developer-flow {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	overflow: hidden;
+}
+
+.developer-flow-step {
+	background: white;
+	border-bottom: 1px solid var(--line);
+	border-right: 1px solid var(--line);
+	min-height: 205px;
+	padding: 20px;
+}
+
+.developer-flow-step:nth-child(2n) {
+	border-right: 0;
+}
+
+.developer-flow-step:nth-last-child(-n + 2) {
+	border-bottom: 0;
+}
+
+.developer-flow-step span {
+	color: var(--subtle);
+	display: inline-flex;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.developer-flow-step h2 {
+	font-size: 18px;
+	line-height: 1.3;
+	margin: 18px 0 8px;
+}
+
+.developer-flow-step p {
+	margin: 0;
+}
+
+.developer-checklist {
+	display: grid;
+	gap: 40px;
+	grid-template-columns: minmax(0, 0.84fr) minmax(320px, 1fr);
+}
+
+.developer-checklist ul {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.developer-checklist li {
+	background: white;
+	border-bottom: 1px solid var(--line);
+	margin: 0;
+	padding: 18px 20px;
+}
+
+.developer-checklist li:last-child {
+	border-bottom: 0;
+}
+
+.code-section {
+	padding-bottom: 32px;
+}
+
+.code-panel {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+	overflow: hidden;
+}
+
+.code-panel > div {
+	background: var(--panel);
+	border-right: 1px solid var(--line);
+	padding: 24px;
+}
+
+.code-panel h2 {
+	font-size: 24px;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.code-sample {
+	background: #111111;
+	color: #f5f5f5;
+	font-family:
+		"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	font-size: 13px;
+	line-height: 1.55;
+	margin: 0;
+	overflow-x: auto;
+	padding: 24px;
+	tab-size: 2;
+}
+
+.code-sample code {
+	font-family: inherit;
+	white-space: pre;
+}
+
 .site-footer {
 	border-top: 1px solid var(--line);
 	color: var(--muted);
@@ -557,19 +711,23 @@ img {
 	}
 
 	.hero-section,
+	.developer-hero,
+	.developer-checklist,
 	.metric-strip,
 	.rich-text-section,
 	.cta-section {
 		grid-template-columns: 1fr;
 	}
 
-	.hero-section {
+	.hero-section,
+	.developer-hero {
 		padding-top: 48px;
 	}
 
 	.integration-flow,
 	.feature-grid,
-	.metric-grid {
+	.metric-grid,
+	.code-panel {
 		grid-template-columns: 1fr;
 	}
 
@@ -597,6 +755,11 @@ img {
 	.cta-section {
 		justify-items: start;
 	}
+
+	.code-panel > div {
+		border-bottom: 1px solid var(--line);
+		border-right: 0;
+	}
 }
 
 @media (max-width: 560px) {
@@ -607,6 +770,9 @@ img {
 
 	.site-header,
 	.hero-section,
+	.developer-hero,
+	.developer-checklist,
+	.code-section,
 	.section,
 	.metric-strip,
 	.cta-section,
@@ -619,6 +785,11 @@ img {
 		font-size: 38px;
 		line-height: 1.04;
 		max-width: calc(100vw - 36px);
+	}
+
+	.developer-hero h1 {
+		font-size: 36px;
+		line-height: 1.05;
 	}
 
 	.hero-visual {
@@ -654,5 +825,26 @@ img {
 	.rich-text {
 		border-left: 0;
 		padding-left: 0;
+	}
+
+	.developer-flow {
+		grid-template-columns: 1fr;
+	}
+
+	.developer-flow-step,
+	.developer-flow-step:nth-child(2n),
+	.developer-flow-step:nth-last-child(-n + 2) {
+		border-bottom: 1px solid var(--line);
+		border-right: 0;
+		min-height: auto;
+	}
+
+	.developer-flow-step:last-child {
+		border-bottom: 0;
+	}
+
+	.code-sample {
+		font-size: 12px;
+		padding: 18px;
 	}
 }
