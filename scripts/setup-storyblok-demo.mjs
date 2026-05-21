@@ -289,6 +289,7 @@ function navItems() {
 		blok('nav_item', { label: 'Visual editor', href: '/visual-editor' }),
 		blok('nav_item', { label: 'Preview pipeline', href: '/preview-pipeline' }),
 		blok('nav_item', { label: 'Content model', href: '/content-model' }),
+		blok('nav_item', { label: 'React CMS', href: '/react-cms' }),
 	];
 }
 

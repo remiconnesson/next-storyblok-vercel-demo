@@ -48,6 +48,10 @@ The script publishes:
 - `/preview-pipeline`
 - `/content-model`
 
+The app also includes `/react-cms`, a static React implementation guide that
+shows how the frontend fetches Storyblok stories and maps CMS blocks to React
+components.
+
 ## Production Flow
 
 Public routes fetch `published` content with a public delivery token and cache it with the `storyblok` cache tag. Draft content is only available after enabling Next.js Draft Mode through the signed preview endpoint:
