@@ -177,6 +177,7 @@ export function IntegrationNode({ blok }) {
 export function MetricStrip({ blok }) {
 	return (
 		<section className="metric-strip" {...storyblokEditable(blok)}>
+			<span>HELLO FROM THE CODE</span>
 			<div>
 				<p className="eyebrow">{blok.eyebrow}</p>
 				<h2>{blok.heading}</h2>
